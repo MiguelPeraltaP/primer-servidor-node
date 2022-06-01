@@ -56,6 +56,12 @@ app.post('/imagen', upload.single('imagen'), async(req, res) => {
 
     res.send({resizedImage: finalImage})
 })
-
 //Servidor escucha en el puerto 3000 (localhost:3000)
-app.listen(3000)
+//app.listen(3000)
+
+//PORT sirve para decirle al servidor que escuche en el puerto que Heroku nos asigna
+//Si no se pone el puerto Heroku asigna el puerto 3000
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en el puerto ${PORT}`)
+})
