@@ -50,7 +50,7 @@ app.post('/imagen', upload.single('imagen'), async(req, res) => {
     //Buffer de datos de nuestra imagen remasterizada
     const finalImage = await rezisedImage.toBuffer()
 
-    fs.writeFileSync('images/graduacion.png', finalImage)
+    fs.writeFileSync('images/glob.jpg', finalImage)
 
     console.log(rezisedImage)
 
