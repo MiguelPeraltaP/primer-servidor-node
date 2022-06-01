@@ -1,1 +1,1 @@
-# Este es mi primer servidor con Nodejs
+# Resized Images
